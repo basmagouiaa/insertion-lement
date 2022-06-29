@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Insertion</title>
-
-<script>
-
-var input= document.getElementById('c').value;
-</script>
-</head>
-<body>
-
-
-<p>Inserer element</p>
-
-<input type="text" id="c" >
+    <title>Insertion</title>
+    <script>
+        function addtolist()
+        {
+            document.getElementById('l').value = document.getElementById('l').value 
+            + ' ' + document.getElementById('c').value 
+        }
     
-<button type="button">+</button> <br>
-<p>tableau</p> <br>
-<button type="button">calculer</button> <br>
+    </script>
+</head>
 
+<body>
+    
+    <form action="calcul.php" method="post">
+        Inserer element: <input type="text" id="c" >
+        <button type="button" onclick="addtolist()"> ADD </button> <br><br><br>
+        Liste des entiers inseres: <input type="text" id="l" name="l">
+        <br><br>
+        <input type="submit">
+    </form>
 
 </body>
 </html>
